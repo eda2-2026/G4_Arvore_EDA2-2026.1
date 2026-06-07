@@ -14,6 +14,10 @@ public class Usuario {
     private List<Transacao> extrato = new ArrayList<>();
 
 
+    public long getMatricula() {
+        return matricula;
+    }
+
     public Grupo getGrupo() {
         return grupo;
     }
