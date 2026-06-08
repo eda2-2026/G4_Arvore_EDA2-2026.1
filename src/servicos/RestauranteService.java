@@ -34,6 +34,10 @@ public class RestauranteService {
     }
 
     public static Dinheiro adicionarFundos(Usuario usuario, Dinheiro valor) {
+        if (valor.reais() < 0 || (valor.reais() == 0 && valor.centavos() < 0)) {
+            throw new IllegalArgumentException("O valor da recarga não pode ser negativo.");
+        }
+
         if (!usuarioCadastrado(usuario))
             throw new UsuarioNaoCadastradoException();
 

@@ -53,8 +53,8 @@ A aplicação foi desenhada para rodar de forma leve e autônoma. O repositório
    * Execute a classe `GeradorUsuarios`.
    * O console informará a conclusão, e o arquivo `usuarios.csv` será criado na **raiz do projeto**.
 4. **Passo 2 - Iniciar o Sistema do Restaurante:**
-   * Navegue até o arquivo `src/main.java`.
-   * Execute a classe `main`. O sistema carregará os usuários para a memória (dentro da AVL) e abrirá automaticamente o Painel Principal em interface gráfica.
+   * Navegue até o arquivo `src/Main.java`.
+   * Execute a classe `Main`. O sistema carregará os usuários para a memória (dentro da AVL) e abrirá automaticamente o Painel Principal em interface gráfica.
 5. **Passo 3 - Persistência do Extrato:**
    * Na primeira vez que o sistema for rodado, é normal ver um aviso no terminal informando que o `transacoes.csv` não foi encontrado. Esse banco de dados relacional é criado e atualizado no exato momento em que você clica em **"Sair"** no menu principal da aplicação, gravando o histórico e os novos saldos na raiz do projeto de forma segura.
 

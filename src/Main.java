@@ -9,7 +9,7 @@ import entidades.Dinheiro;
 import entidades.Grupo;
 import entidades.Usuario;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         // Carrega o banco de dados inicial silenciosamente
         carregarUsuariosDoCSV("usuarios.csv");
