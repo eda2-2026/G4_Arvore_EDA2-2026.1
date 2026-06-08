@@ -98,6 +98,16 @@ public class GeradorUsuarios {
         } catch (IOException e) {
             System.err.println("Erro ao escrever arquivo: " + e.getMessage());
         }
+
+        // Limpar transacoes antigas já que os usuários foram resetados
+        java.io.File arquivoTransacoes = new java.io.File("transacoes.csv");
+        if (arquivoTransacoes.exists()) {
+            if (arquivoTransacoes.delete()) {
+                System.out.println("Banco de transacoes.csv antigo apagado para evitar inconsistências!");
+            } else {
+                System.err.println("Não foi possível apagar o arquivo transacoes.csv antigo.");
+            }
+        }
     }
 
     private static String gerarNome(char sexo) {
