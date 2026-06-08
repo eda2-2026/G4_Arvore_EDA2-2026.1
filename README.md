@@ -58,6 +58,25 @@ A aplicação foi desenhada para rodar de forma leve e autônoma. O repositório
 5. **Passo 3 - Persistência do Extrato:**
    * Na primeira vez que o sistema for rodado, é normal ver um aviso no terminal informando que o `transacoes.csv` não foi encontrado. Esse banco de dados relacional é criado e atualizado no exato momento em que você clica em **"Sair"** no menu principal da aplicação, gravando o histórico e os novos saldos na raiz do projeto de forma segura.
 
+## 🎥 Demonstração Visual
+
+**Assista ao nosso vídeo explicativo no YouTube:** [![Vídeo de Demonstração](https://img.youtube.com/vi/3zbbirvQhJc/maxresdefault.jpg)](https://www.youtube.com/watch?v=3zbbirvQhJc)
+
+### Capturas de Tela do Sistema
+
+<details>
+<summary><b>🖼️ Clique para expandir as imagens do sistema</b></summary>
+<br>
+
+<p align="center">
+  <img src="docs/assets/screenshots/Screenshot_1.png" width="500"/><br><br>
+  <img src="docs/assets/screenshots/Screenshot_2.png" width="500"/><br><br>
+  <img src="docs/assets/screenshots/Screenshot_3.png" width="500"/><br><br>
+  <img src="docs/assets/screenshots/Screenshot_4.png" width="500"/><br><br>
+  <img src="docs/assets/screenshots/Screenshot_5.png" width="500"/>
+</p>
+</details>
+
 ## Equipe de Desenvolvimento
 
 | <img src="docs/assets/fotos/Davi-UnB.png" width="120px;" alt="Davi Freitas"/><br />**Davi Freitas** | <img src="docs/assets/fotos/Mateus0xC.png" width="120px;" alt="Mateus Barreto"/><br />**Mateus Barreto** |
