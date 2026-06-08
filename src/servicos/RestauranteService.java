@@ -4,6 +4,7 @@ import entidades.Dinheiro;
 import entidades.Refeicao;
 import entidades.Transacao;
 import entidades.Usuario;
+import servicos.CadastroService;
 import excecoes.RestauranteFechadoException;
 import excecoes.SaldoInsuficienteException;
 import excecoes.UsuarioJaComeuException;
@@ -48,20 +49,17 @@ public class RestauranteService {
     }
 
     private static boolean usuarioCadastrado(Usuario usuario) {
-        return true; //TODO
+        return CadastroService.buscarUsuario(usuario.getMatricula()) != null;
     }
 
     private static boolean usuarioPodeComer(Usuario usuario, Refeicao refeicao) {
         LocalDate hoje = LocalDate.now();
 
-        LocalDateTime inicioTurnoHoje = hoje.atTime(refeicao.getHorarioInicio());
-        LocalDateTime fimTurnoHoje = hoje.atTime(refeicao.getHorarioFim());
-
         for (Transacao transacao : usuario.getExtrato(0)) {
-            LocalDateTime dataTransacao = transacao.getData();
-
-            if (!dataTransacao.isBefore(inicioTurnoHoje) && !dataTransacao.isAfter(fimTurnoHoje))
+            // Se houver uma transação de consumo hoje para o MESMO turno, bloqueia
+            if (transacao.getData().toLocalDate().equals(hoje) && transacao.getRefeicao() == refeicao) {
                 return false;
+            }
         }
 
         return true;

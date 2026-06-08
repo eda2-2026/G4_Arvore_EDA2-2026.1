@@ -13,9 +13,19 @@ public class Usuario {
     private Grupo grupo;
     private List<Transacao> extrato = new ArrayList<>();
 
+    public Usuario(long matricula, String nome, Dinheiro saldo, Grupo grupo) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.saldo = saldo;
+        this.grupo = grupo;
+    }
 
     public long getMatricula() {
         return matricula;
+    }
+
+    public String getNome() {
+        return nome;
     }
 
     public Grupo getGrupo() {

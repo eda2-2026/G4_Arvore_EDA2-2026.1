@@ -62,4 +62,12 @@ public record Dinheiro(int reais, int centavos) {
 
         return new Dinheiro(novosReais, novosCentavos);
     }
+    
+    public int getReais() {
+        return reais;
+    }
+
+    public int getCentavos() {
+        return centavos;
+    }
 }

@@ -252,4 +252,19 @@ public class Avl {
 
         return raiz;
     }
+
+    // Retorna todos os usuários da árvore AVL ordenados pela matrícula (Travessia In-Order)
+    public java.util.List<Usuario> obterTodos() {
+        java.util.List<Usuario> lista = new java.util.ArrayList<>();
+        obterTodosRec(raiz, lista);
+        return lista;
+    }
+
+    private void obterTodosRec(Node no, java.util.List<Usuario> lista) {
+        if (no != null) {
+            obterTodosRec(no.esq, lista);
+            lista.add(no.usuario);
+            obterTodosRec(no.dir, lista);
+        }
+    }
 }

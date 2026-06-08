@@ -1,2 +1,5 @@
 .idea
 G4_Arvore_EDA2-2026.1.iml
+out
+transacoes.csv
+usuarios.csv
